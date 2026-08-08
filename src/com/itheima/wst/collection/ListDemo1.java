@@ -37,5 +37,15 @@ public class ListDemo1 {
         Integer i=1;        //手动装箱，实现了删除对象，因为integer对象类型和object更近
         l2.remove(i);
         System.out.println(l2);
+
+        //set方法
+        List<String> l3=new ArrayList<>();
+        l3.add("a");
+        l3.add("b");
+        l3.set(0,"A");
+        System.out.println(l3);
+
+        //get方法
+        System.out.println(l3.get(0));
     }
 }
