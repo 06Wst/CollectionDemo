@@ -3,6 +3,7 @@ package com.itheima.wst.collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.function.BiConsumer;
 
 public class MapDemo2 {
     public static void main(String[] args) {
@@ -36,5 +37,19 @@ public class MapDemo2 {
             System.out.print(i.getKey()+" ");      //通过getKey()方法获取键
             System.out.print(i.getValue()+" ");    //通过getValue()方法获取值
         }
+        System.out.println();
+        System.out.println("-----------------");
+
+        //lambda表达式遍历键值对对象，底层是通过entrySet()方法获取键值对的集合
+        m2.forEach(new BiConsumer<String, String>() {
+            @Override
+            public void accept(String s, String s2) {
+                System.out.print(s+" "+s2+" ");
+            }
+        });
+        System.out.println();
+        m2.forEach(( k, v)-> System.out.print(k+" "+v));
+        System.out.println();
+        System.out.println("-----------------");
     }
 }
