@@ -18,7 +18,12 @@ public class CollectionsDemo1 {
         //sort方法排序
         Collections.sort(l1);
         System.out.println(l1);
-
+        /*Collections.sort(l1, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return 0;
+            }
+        });*/
         Collections.sort(l1, (o1,o2)->o1.charAt(0)-o2.charAt(0));
         System.out.println(l1);
 
