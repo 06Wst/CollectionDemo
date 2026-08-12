@@ -2,6 +2,6 @@ package com.itheima.wst.mymap;
 
 public class App {
     public static void main(String[] args) {
-        PokerGame game=new PokerGame();
+        PokerGame1 game=new PokerGame1();
     }
 }

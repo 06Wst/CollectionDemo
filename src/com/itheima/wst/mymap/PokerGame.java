@@ -8,7 +8,7 @@ public class PokerGame {
 
     //准备牌，要在构造方法外，只需要准备一副牌
     //牌盒，静态
-    //static ArrayList<String> deck=new ArrayList<>();
+    //static ArrayList<String> deck=new ArrayList<>();             //版本1
     static {          //静态代码块，只执行一次，随着类的加载而加载
         String [] color={"♠","♥","♣","♦"};
         String [] number={"3","4","5","6","7","8","9","10","J","Q","K","A","2"};    //按照牌面大小排序
@@ -41,6 +41,7 @@ public class PokerGame {
         TreeSet<Integer> p3=new TreeSet<>();
         TreeSet<Integer> lord=new TreeSet<>();
         //遍历
+        //版本1
         /*for (int i=0;i<deck.size();i++){
             String s=deck.get(i);
             if(i<=2){
@@ -80,9 +81,12 @@ public class PokerGame {
         System.out.println(map);
 
     }
+    //初始版本
     /*public void lookPoker(String name,ArrayList<String> p){
         System.out.println(name+"的牌为："+p);
     }*/
+
+    //排序方法1
     public void lookPoker(String name,TreeSet<Integer> p){
         System.out.print(name+"的牌为：");
         for (Integer i : p) {
